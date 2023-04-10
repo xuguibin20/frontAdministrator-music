@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <!-- 折叠图片 -->
-    <div class="collapse-btn" @click="collapseChange">
+    <div class="collapse-btn">
       <i class="el-icon-menu"></i>
     </div>
     <div class="logo">music后台管理</div>
@@ -44,10 +44,10 @@ export default {
   },
   methods: {
     //侧边栏折叠
-    collapseChange() {
-      this.collapse = !this.collapse;
-      bus.$emit("collapse", this.collapse);
-    }, //全屏事件
+    // collapseChange() {
+    //   this.collapse = !this.collapse;
+    //   bus.$emit("collapse", this.collapse);
+    // }, //全屏事件
     handleFullScreen() {
       if (this.fullscreen) {
         if (document.exitFullscreen) {
